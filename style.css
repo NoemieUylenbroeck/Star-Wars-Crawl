@@ -1,3 +1,12 @@
+@keyframes introduction{
+    0%{
+        opacity:1;
+    }
+    100%{
+        opacity:0;
+    }
+}
+
 @keyframes imagebecode{
 0%{
     transform:scale(1);
@@ -10,14 +19,18 @@
 body{
     background-image: url(Images/backgroundétoilé.jpg);
     background-repeat: no-repeat;
-}
+    background-attachment: fixed;
+    }
 
 .intro{
     width : 700px;
     margin:auto;
     color:blue;
+    font-size : 50px;
     text-align: center;
-}
+    padding-top : 300px;
+    animation:introduction 5s ease-out forwards;
+    }
 
 figure img{
     display:block;
@@ -33,4 +46,6 @@ figure img{
     color : yellow;
     text-align:justify;
     margin:auto;
+    perspective: 400px;
+    perspective-origin: bottom;
    }
