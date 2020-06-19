@@ -7,15 +7,6 @@
 }
 }
 
-@keyframes textestarwars{
-    0%{
-        transform:translateY (0px);
-    }
-    100%{
-        transform:translateY (500px);
-    }
-}
-
 body{
     background-image: url(Images/backgroundétoilé.jpg);
     background-repeat: no-repeat;
@@ -42,7 +33,4 @@ figure img{
     color : yellow;
     text-align:justify;
     margin:auto;
-    animation-name:textestarwars;
-    animation-duration:10s;
-    animation-delay:1s;
-}
+   }
