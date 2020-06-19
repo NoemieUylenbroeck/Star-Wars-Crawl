@@ -11,10 +11,13 @@
 0%{
     transform:scale(1);
     opacity : 1;
+
 }
+
 99%{
-    opacity : 1;
+    opacity:1;
 }
+
 100%{
     transform:scale(0);
 }
@@ -22,11 +25,12 @@
 
 @keyframes texte{
     0%{ opacity : 1;
-        transform:translateY(0px);
+        transform : translateY(0px)rotateX(20deg) translateZ(0);
+    
     }
     100%{
         opacity : 1;
-        transform:translateY(400px)
+        transform : translateY(-5000px) rotateX(25deg) translateZ(-500px);
     }
 
 }
@@ -34,7 +38,7 @@ body{
     background-image: url(Images/backgroundétoilé.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    overflow : hidden;
+    overflow: hidden;    
     }
 
 .position{
@@ -46,7 +50,9 @@ body{
     color:blue;
     font-size : 50px;
     text-align: center;
-    animation:introduction 5s ease-out;
+    animation-name:introduction;
+    animation-duration:5s; 
+    animation-timing-function:ease-out;
     opacity : 0;
     position: absolute;
     top : 0px;
@@ -57,9 +63,9 @@ figure img{
     display:block;
     width: 800px;
     animation-name:imagebecode;
-    animation-duration:13s;
-    animation-fill-mode:forwards;
-    animation-delay : 1s;
+    animation-duration: 5s;
+    animation-delay : 4s;
+    animation-timing-function : linear;
     opacity : 0;
     position: absolute;
     top:-50px;
@@ -67,19 +73,22 @@ figure img{
     z-index: 1;
 }
 
+.parentélément{
+    perspective: 400px;
+}
+
 .article{
-    width : 700px;
+    width : 1000px;
     height:auto;
     color : yellow;
+    font-size :100px;
     text-align:justify;
-    margin:auto;
-    perspective: 400px;
-    perspective-origin: bottom;
     opacity:1;
-    animation-name : texte;
-    animation-delay : 2s;
-    animation-duration : 1s;
+    transform-origin:50% 100%;
     position:absolute;
-    top: 700px;
-    left : 400px;
-   }
+    left : 250px;
+    top : 1500px;
+    animation-name : texte;
+    animation-delay : 7s;
+    animation-duration : 30s;
+    }
