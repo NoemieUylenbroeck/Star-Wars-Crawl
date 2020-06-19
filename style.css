@@ -1,19 +1,48 @@
-@keyframes animationstarwars{
-    0%{}
+@keyframes imagebecode{
+0%{
+    transform:scale(1);
+}
+100%{
+    transform:scale(0);
+}
+}
+
+@keyframes textestarwars{
+    0%{
+        transform:translateY (0px);
+    }
+    100%{
+        transform:translateY (500px);
+    }
 }
 
 body{
-    background-color: black;
+    background-image: url(Images/backgroundétoilé.jpg);
+    background-repeat: no-repeat;
 }
 
 .intro{
-    color : #127478
+    width : 700px;
+    margin:auto;
+    color:blue;
+    text-align: center;
 }
 
-article{
-    color:#FFE81F;
+figure img{
+    display:block;
+    margin:auto;
+    animation-name:imagebecode;
+    animation-duration:13s;
+    animation-fill-mode:forwards;
+}
+
+.article{
+    width : 700px;
+    height:auto;
+    color : yellow;
     text-align:justify;
-    padding-right:400px;
-    padding-left:400px;
-    font-size : 75px;
+    margin:auto;
+    animation-name:textestarwars;
+    animation-duration:10s;
+    animation-delay:1s;
 }
