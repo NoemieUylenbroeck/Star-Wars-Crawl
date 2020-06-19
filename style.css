@@ -20,10 +20,21 @@
 }
 }
 
+@keyframes texte{
+    0%{ opacity : 1;
+        transform:translateY(0px);
+    }
+    100%{
+        opacity : 1;
+        transform:translateY(400px)
+    }
+
+}
 body{
     background-image: url(Images/backgroundétoilé.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
+    overflow : hidden;
     }
 
 .position{
@@ -38,22 +49,21 @@ body{
     animation:introduction 5s ease-out;
     opacity : 0;
     position: absolute;
-    top : 50px;
+    top : 0px;
     left : 400px;
     }
 
 figure img{
     display:block;
-    margin:auto;
-    top : 300px;
+    width: 800px;
     animation-name:imagebecode;
     animation-duration:13s;
     animation-fill-mode:forwards;
-    animation-delay : 5s;
+    animation-delay : 1s;
     opacity : 0;
     position: absolute;
-    top:70px;
-    left:500px;
+    top:-50px;
+    left:350px;
     z-index: 1;
 }
 
@@ -65,5 +75,11 @@ figure img{
     margin:auto;
     perspective: 400px;
     perspective-origin: bottom;
-    opacity:0;
+    opacity:1;
+    animation-name : texte;
+    animation-delay : 2s;
+    animation-duration : 1s;
+    position:absolute;
+    top: 700px;
+    left : 400px;
    }
